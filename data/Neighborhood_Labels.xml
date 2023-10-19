@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <origin/>
+                <pubdate>20190503</pubdate>
+                <title>Neighborhood Labels as Centroids</title>
+                <geoform>vector digital data</geoform>
+                <lworkcit>
+                    <citeinfo>
+                        <title>DC Geographic Information System</title>
+                    </citeinfo>
+                </lworkcit>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>This dataset was created by the DC Office of Planning and provides a simplified representation of the neighborhoods of the District of Columbia. These boundaries are used by the Office of Planning to determine appropriate locations for placement of neighborhood names on maps. They do not reflect detailed boundary information, do not necessarily include all commonly-used neighborhood designations, do not match planimetric centerlines, and do not necessarily match Neighborhood Cluster boundaries. There is no formal set of standards that describes which neighborhoods are represented or where boundaries are placed. These informal boundaries are not appropriate for display, calculation, or reporting. Their only appropriate use is to guide the placement of text labels for DC's neighborhoods. This is an informal product used for internal mapping purposes only. It should be considered draft, will be subject to change on an irregular basis, and is not intended for publication. </abstract>
+            <purpose>This dataset was created by the DC Office of Planning and provides a simplified representation of the neighborhoods of the District of Columbia. These boundaries are used by the Office of Planning to determine appropriate locations for placement of neighborhood names on maps. They do not reflect detailed boundary information, do not necessarily include all commonly-used neighborhood designations, do not match planimetric centerlines, and do not necessarily match Neighborhood Cluster boundaries.</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-77.10351806177977</westbc>
+                <eastbc>-76.91738717238479</eastbc>
+                <northbc>38.991757174934705</northbc>
+                <southbc>38.826944673524444</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>Neighborhood</themekey>
+                <themekey>Neighborhoods</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>society</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>Washington</placekey>
+                <placekey>D.C.</placekey>
+                <placekey>DCGIS</placekey>
+                <placekey>DC</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>District of Columbia</placekey>
+            </place>
+        </keywords>
+        <accconst>Other Constraints</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>DCGIS DC Office of Planning (DCOP)</datacred>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Data believed to be complete and accurate, subject to change. Digital version compared with original source data for accuracy and completeness. Validated by source and/or responsible agency.</attraccr>
+        </attracc>
+        <logic>In process of validation by source and/or responsible agency.</logic>
+        <complete>Data are believed to be best available, however neighborhoods are constantly in flux. Reasonable people may differ on when new neighborhoods should be recognized, so it is impossible to assure that this data set is complete.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>These are crudely-sketched boundaries. No explicit accuracy standard applies.</horizpar>
+            </horizpa>
+        </posacc>
+        <lineage>
+            <procstep>
+                <procdesc>These boundaries represent a consensus view of the Office of Planning staff, and are sketched and revised from time to time.</procdesc>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>DC Office of Planning (DCOP)</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>801 North Capitol St, NE # 4000</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20002</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>(202) 442-7600</cntvoice>
+                        <cntfax>(202) 442-7637</cntfax>
+                        <hours>8:30 am - 5:00 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>"Name" and "Label_Name" fileds for GIS_ID="nhood_032" were modified (for the name field "Connecticut Avenue/K Street" was replaced by "Golden Triangle" and for label_name field "Connecticut" was replaced by "Golden Triangle"). A new field "DateLastModified" was added and populated with the previous publication date for the other records and the "03/02/2007" for the modified ones. All features/records of "web_url" field was modified ("http://neighborhoodaction.dc.gov" was replaced by "http://op.dc.gov").</procdesc>
+            </procstep>
+            <procstep>
+                <procdesc>Added Mount Vernon Triangle and renamed Golden Triangle to Connecticut Avenue/K Street.</procdesc>
+                <procdate>20190503</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>unknown</addrtype>
+                            <address>200 I Street SE, 5th Floor</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20003</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>(202) 727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>8:30 am - 5 pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>132</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>NbhNamesPt</enttypl>
+                <enttypd>Neighborhood Boundaries</enttypd>
+                <enttypds>DCGIS / DCOP</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+                <attrdef>OCTO GIS sequential identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Unique id</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>WEB_URL</attrlabl>
+                <attrdef>OCTO GIS sequential identifier</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>LABEL_NAME</attrlabl>
+                <attrdef>Neighborhood name</attrdef>
+                <attrdefs>OCTO</attrdefs>
+            </attr>
+            <attr>
+                <attrlabl>DATELASTMODIFIED</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20190514</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>

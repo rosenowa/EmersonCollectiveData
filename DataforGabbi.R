@@ -12,6 +12,7 @@ acs_data <- load_variables(year = 2021,
                            cache = TRUE) #data detail tables
 head(acs_data)
 
+#searching for specific concepts within the ACS df
 acs_data[grep(x = acs_data$concept, "Sex"),
          c("concept", "label")]
 

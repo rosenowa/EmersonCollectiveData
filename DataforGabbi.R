@@ -68,7 +68,7 @@ ch_acs_detail <- get_acs(geography = "tract",
                         "B01001_049", #F pop over 85
                         "B01002_002", #median age M
                         "B01002_003", #median age F
-                        "B01003_001", #total pop
+                        "B01001_001", #total pop
                         "B01001_002", #total M
                         "B01001_026", #total F
                         "B03002_001", #total race pop.
@@ -89,10 +89,10 @@ ch_acs_detail <- get_acs(geography = "tract",
 ch_acs_detail <- filter(ch_acs_detail, GEOID==11001009804 | GEOID==11001007304 | GEOID==11001010400) 
 
 #dropping Margin of Error 
-ch_acs_detail <-ch_acs_detail %>% select(ends_with("E"))
+ch_acs_detail <-ch_acs_detail %>% select(ends_with(c("D","E")))
 
 #grouping variables and creating new names
-ch_acs_detail <-ch_acs_detail %>% mutate(
+ch_acs_detail <-ch_acs_detail %>% mutate(total_pop = B01001_001E,
                                          under5 = B01001_003E + B01001_027E,
                                          pop5_17 = B01001_004E + B01001_005E + B01001_006E + 
                                            B01001_028E + B01001_029E + B01001_030E,
@@ -121,12 +121,7 @@ ch_acs_detail <-ch_acs_detail %>% mutate(
                                          median_ageF = B01002_003E,
                                          renters = B07013_003E,
                                          owners = B07013_002E)
-# #ch_acs_detail <-ch_acs_detail %>% mutate(white_perc = white_alone / total_race,
-#                                          black_perc = black / total_race,
-#                                          amind_perc = amind_natalas / total_race,
-#                                          asian_perc = asian / total_race,
-#                                          nathi_perc = nathi_pi / total_race,
-#                                          hisp_perc = hisp / total_race)
+
 
 # #I want to create one row that summarizes everything but have yet to do that
 # summarise (ch_acs_detail)
@@ -134,6 +129,8 @@ ch_acs_detail <-ch_acs_detail %>% mutate(
 # CH_total %>%
 #   bind_rows(summarise_all(ch_acs_detail, ~if(is.numeric(.)) sum(.) else "Total")
 
+#exporting ch_acs_detail df 
+write.csv(ch_acs_detail, "/Users/annierosenow/Library/CloudStorage/Box-Box/Emerson 2022/Mapping/data/for Gabbi/ch_acs_gabbi.csv", row.names=FALSE)
 
 # creating age table
 ch_acs_AGE <- ch_acs_detail %>% 
@@ -187,5 +184,6 @@ ch_acs_renters_owners <- ch_acs_detail %>%
   summarize(perc_renters= totalrenters/(totalowners + totalrenters),
             perc_owners= totalowners/(totalowners + totalrenters))
 
-
+#leftjoin could add the data table to 
+#write.csv(df, "C:/Users/VSulkaHewes/Box/Emerson CEE/Mapping/data/for Gabbi/file_name.csv", row.names=FALSE)
                                       

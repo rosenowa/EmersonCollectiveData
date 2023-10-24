@@ -105,32 +105,27 @@ bg_data <- map_df(years, ~acs_pull(geos, .x, selected_vars))%>%
 #removing moe and renaming variables
 bg_data <-bg_data %>% select(starts_with(c("estimate_", "NAME", "GEOID", "geometry")))%>%
   mutate(total_pop = estimate_B01001_001, # create new variables for maps; update variable names so that they're recognizable
-         under5 = B01001_003E + B01001_027E,
-         pop5_17 = B01001_004E + B01001_005E + B01001_006E + 
-           B01001_028E + B01001_029E + B01001_030E,
+         under5 = estimate_B01001_003 + estimate_B01001_027,
+         pop5_17 = estimate_B01001_004 + estimate_B01001_005 + estimate_B01001_006 + 
+           estimate_B01001_028 + estimate_B01001_029 + estimate_B01001_030,
          pop18_24 =
-           B01001_007E + B01001_008E + B01001_009E + B01001_010E +
-           B01001_031E + B01001_032E + B01001_033E + B01001_034E,
+           estimate_B01001_007 + estimate_B01001_008 + estimate_B01001_009 + estimate_B01001_010 +
+           estimate_B01001_031 + estimate_B01001_032 + estimate_B01001_033 + estimate_B01001_034,
          pop25_65 =
-           B01001_011E + B01001_012E + B01001_013E + B01001_014E + B01001_015E +
-           B01001_016E + B01001_017E + B01001_018E + B01001_019E +
-           B01001_035E + B01001_036E + B01001_037E + B01001_038E + B01001_039E +
-           B01001_040E + B01001_041E + B01001_042E + B01001_043E,
+           estimate_B01001_011 + estimate_B01001_012 + estimate_B01001_013 + estimate_B01001_014 + estimate_B01001_015 +
+           estimate_B01001_016 + estimate_B01001_017 + estimate_B01001_018 + estimate_B01001_019 +
+           estimate_B01001_035 + estimate_B01001_036 + estimate_B01001_037 + estimate_B01001_038 + estimate_B01001_039 +
+           estimate_B01001_040 + estimate_B01001_041 + estimate_B01001_042 + estimate_B01001_043,
          pop65_85 =
-           B01001_020E + B01001_021E + B01001_022E + B01001_023E + B01001_024E +
-           B01001_044E + B01001_045E + B01001_046E + B01001_047E + B01001_048E,
-         popover85 = B01001_025E + B01001_049E,
-         male_tract= B01001_002E, 
-         female_tract= B01001_026E,
-         
-    #this is where we differ, I think you created a variable for each block group/tract which makes sense for mapping? But I summarized the columns 
-         under65_pop = total_pop - over65_pop,
-         under18_pop_perc = under18_pop / total_pop,
-         over18_pop_perc = over18_pop / total_pop,
-         under85_pop_perc = under85_pop / total_pop,
-         over85_pop_perc = over85_pop / total_pop,
-         under65_pop_perc = under65_pop / total_pop,
-         over65_pop_perc = over65_pop / total_pop,
+           estimate_B01001_020 + estimate_B01001_021 + estimate_B01001_022 + estimate_B01001_023 + estimate_B01001_024 +
+           estimate_B01001_044 + estimate_B01001_045 + estimate_B01001_046 + estimate_B01001_047 + estimate_B01001_048,
+         popover85 = estimate_B01001_025 + estimate_B01001_049,
+         under5_pop_perc = under5 / total_pop,
+         between5_17_pop_perc = pop5_17 / total_pop,
+         between18_24pop_perc = pop18_24 / total_pop,
+         between25_65pop_perc = pop25_65 / total_pop,
+         between65_85pop_perc = pop65_85 / total_pop,
+         over85_pop_perc = popover85 / total_pop,
          med_inc = estimate_B19013_001,
          total_race = estimate_B03002_001,
          white_alone = estimate_B03002_003,

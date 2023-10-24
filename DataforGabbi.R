@@ -82,7 +82,7 @@ ch_acs_detail <- get_acs(geography = "tract",
                         "B07013_003",#renters
                         "B07013_002" #owners
           ), 
-          geometry = T,
+          geometry = F,
           output= "wide")
 
 #filtering it so that it only shows congress height tracks
@@ -130,7 +130,9 @@ ch_acs_detail <-ch_acs_detail %>% mutate(total_pop = B01001_001E,
 #   bind_rows(summarise_all(ch_acs_detail, ~if(is.numeric(.)) sum(.) else "Total")
 
 #exporting ch_acs_detail df 
-write.csv(ch_acs_detail, "/Users/annierosenow/Library/CloudStorage/Box-Box/Emerson 2022/Mapping/data/for Gabbi/ch_acs_gabbi.csv", row.names=FALSE)
+write.csv(ch_acs_detail, "/Users/annierosenow/Library/CloudStorage/Box-Box/Emerson 2022/Mapping/data/for Gabbi/ch_acs_gabbi.csv", 
+          row.names=FALSE)
+write.csv(ch_acs_detail,file="ch_acs_detail.csv") 
 
 # creating age table
 ch_acs_AGE <- ch_acs_detail %>% 
@@ -148,7 +150,11 @@ ch_acs_AGE <- ch_acs_detail %>%
             perc_65_85= totalpop65_85/ (totalunder5 + totalpop5_17 + totalpop18_24 + totalpop25_65 + totalpop65_85 + totalpopover85),
             perc_over85= totalpopover85/ (totalunder5 + totalpop5_17 + totalpop18_24 + totalpop25_65 + totalpop65_85 + totalpopover85) 
             )
-            
+
+#exporting ch_acs_AGE df 
+write.csv(ch_acs_AGE, "/Users/annierosenow/Library/CloudStorage/Box-Box/Emerson 2022/Mapping/data/for Gabbi/ch_acs_AGE.csv", row.names=FALSE)
+write.csv(ch_acs_AGE,file="ch_acs_AGE.csv") 
+
 # creating F and M table
 ch_acs_SEX <- ch_acs_detail %>% 
   select(male_tract, female_tract) %>% 
